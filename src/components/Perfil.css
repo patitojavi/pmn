@@ -1,0 +1,75 @@
+.perfil-container {
+    justify-content: center;
+    align-items: center;
+    padding: 3rem 1rem;
+    background: #f4f4f4;
+    min-height: 100vh;
+  }
+  
+  .perfil-card {
+    background: white;
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    max-width: 400px;
+    width: 100%;
+  }
+  
+  .avatar {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 1rem;
+  }
+  
+  .nombre {
+    margin: 0.5rem 0 0.2rem;
+    font-size: 1.5rem;
+    color: #333;
+  }
+  
+  .correo,
+  .rol,
+  .registro {
+    color: #666;
+    font-size: 0.9rem;
+    margin: 0.3rem 0;
+  }
+  
+  .resumen {
+    display: flex;
+    justify-content: space-around;
+    margin: 1.5rem 0;
+  }
+  
+  .resumen div {
+    text-align: center;
+  }
+  
+  .resumen strong {
+    font-size: 1.2rem;
+    color: #333;
+  }
+  
+  .resumen span {
+    display: block;
+    font-size: 0.8rem;
+    color: #888;
+  }
+  
+  .editar-btn {
+    padding: 0.5rem 1rem;
+    background-color: #667eea;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.2s ease-in-out;
+  }
+  
+  .editar-btn:hover {
+    background-color: #556cd6;
+  }
+  

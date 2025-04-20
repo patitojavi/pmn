@@ -1,0 +1,76 @@
+.progreso-container {
+    padding: 2rem;
+    background-color: #f7fafc;
+    min-height: 100vh;
+  }
+  
+  .progreso-container h2 {
+    text-align: center;
+    color: #2c3e50;
+    margin-bottom: 2rem;
+  }
+  
+  .progreso-lista {
+    max-width: 700px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+  
+  .progreso-item {
+    background: white;
+    padding: 1.2rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+  }
+  
+  .progreso-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 0.5rem;
+  }
+  
+  .progreso-header h4 {
+    margin: 0;
+    color: #34495e;
+  }
+  
+  .estado {
+    padding: 0.3rem 0.7rem;
+    border-radius: 8px;
+    font-size: 0.8rem;
+    font-weight: 600;
+  }
+  
+  .estado.completado {
+    background-color: #d4edda;
+    color: #155724;
+  }
+  
+  .estado.encurso {
+    background-color: #fff3cd;
+    color: #856404;
+  }
+  
+  .barra {
+    background-color: #e0e0e0;
+    height: 12px;
+    border-radius: 6px;
+    overflow: hidden;
+  }
+  
+  .relleno {
+    height: 100%;
+    background-color: #3498db;
+    border-radius: 6px 0 0 6px;
+    transition: width 0.4s ease;
+  }
+  
+  .progreso-item p {
+    margin-top: 0.5rem;
+    font-size: 0.9rem;
+    color: #555;
+  }
+  

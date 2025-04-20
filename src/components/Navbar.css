@@ -1,0 +1,38 @@
+.navbar {
+    background-color: #011936;
+    padding: 1rem 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  .logo {
+    color: #ffffff;
+    font-size: 1.5rem;
+    font-weight: bold;
+  }
+  
+  .nav-links {
+    list-style: none;
+    display: flex;
+    gap: 1rem;
+  }
+  
+  .nav-links li a {
+    color: #ddd;
+    text-decoration: none;
+    padding: 0.5rem;
+    transition: all 0.2s ease-in-out;
+    border-radius: 6px;
+  }
+  
+  .nav-links li a:hover {
+    background-color: #465362;
+    color: white;
+  }
+  
+  .nav-links li a.active {
+    background-color: #82A3A1;
+    color: #fff;
+  }
+  
