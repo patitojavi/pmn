@@ -65,10 +65,49 @@
 
 ---
 
-## 💡 Notas importantes
+💡 Notas importantes
 
 - Este proyecto **no tiene funcionalidades reales** (login, bases de datos, lógica de inscripción, etc.).
 - Fue creado con fines educativos para demostrar la estructura y navegación de una plataforma web.
+
+---
+
+## 📁 Estructura del proyecto
+
+capacitapp/
+├── public/
+│   └── index.html
+├── src/
+│   ├── components/
+│   │   └── Navbar.jsx             # Barra de navegación común
+│   ├── pages/
+│   │   ├── Login.jsx              # Página principal (simula inicio de sesión)
+│   │   ├── Home.jsx               # Página contenedora con Navbar
+│   │   ├── Perfil.jsx             # Página de perfil de usuario
+│   │   ├── Cursos.jsx             # Página de cursos disponibles
+│   │   ├── Capacitaciones.jsx    # Página de capacitaciones activas
+│   │   ├── Certificados.jsx      # Página con certificados obtenidos
+│   │   ├── Progreso.jsx          # Representación visual del progreso
+│   │   ├── Soporte.jsx           # Información de contacto para ayuda
+│   │   └── Configuracion.jsx     # Vista de configuración de cuenta
+│   ├── App.jsx                   # Componente raíz con rutas
+│   └── main.jsx                  # Punto de entrada del proyecto React
+├── .gitignore
+├── index.html
+├── package.json
+├── vite.config.js
+└── README.md
+
+---
+
+## 📌 Detalles clave:
+- components/Navbar.jsx: Componente de navegación usado en varias páginas.
+
+- pages/: Todas las vistas principales del proyecto están aquí.
+
+- main.jsx: El punto de entrada donde se monta la app en el DOM (ReactDOM.createRoot).
+
+- App.jsx: Define la estructura de rutas con react-router-dom.
 
 ---
 
