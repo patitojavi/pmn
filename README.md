@@ -73,7 +73,7 @@
 ---
 
 ## 📁 Estructura del proyecto
-
+```
 capacitapp/
 ├── public/
 │   └── index.html
@@ -97,7 +97,7 @@ capacitapp/
 ├── package.json
 ├── vite.config.js
 └── README.md
-
+```
 ---
 
 ## 📌 Detalles clave:
