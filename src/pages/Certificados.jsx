@@ -1,4 +1,5 @@
-import '../components/Certificados.css'
+import '../components/Certificados.css';
+import Swal from 'sweetalert2';
 
 const certificados = [
   {
@@ -16,6 +17,15 @@ const certificados = [
 ];
 
 function Certificados() {
+  const handleViewCertificate = (cert) => {
+    Swal.fire({
+      title: cert.titulo,
+      text: `Fecha de emisión: ${cert.fecha}`,
+      icon: 'info',
+      confirmButtonText: 'Cerrar'
+    });
+  };
+
   return (
     <div className="certificados-container">
       <h2>Mis Certificados</h2>
@@ -25,7 +35,7 @@ function Certificados() {
             <h3>{cert.titulo}</h3>
             <p><strong>Curso:</strong> {cert.curso}</p>
             <p><strong>Fecha:</strong> {cert.fecha}</p>
-            <button>Ver certificado</button>
+            <button onClick={() => handleViewCertificate(cert)}>Ver certificado</button>
           </div>
         ))}
       </div>

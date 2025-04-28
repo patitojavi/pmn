@@ -1,4 +1,5 @@
 import '../components/Cursos.css';
+import Swal from 'sweetalert2';
 
 const cursos = [
   {
@@ -25,6 +26,18 @@ const cursos = [
 ];
 
 function Cursos() {
+  const handleVerCurso = (curso) => {
+    Swal.fire({
+      title: curso.titulo,
+      text: `Descripción: ${curso.descripcion}`,
+      imageUrl: curso.imagen,
+      imageWidth: 400,
+      imageHeight: 200,
+      imageAlt: curso.titulo,
+      confirmButtonText: 'Cerrar'
+    });
+  };
+
   return (
     <div className="cursos-container">
       <h2>Mis Cursos</h2>
@@ -37,7 +50,7 @@ function Cursos() {
             <span className={`estado ${curso.estado.toLowerCase()}`}>
               {curso.estado}
             </span>
-            <button>Ver curso</button>
+            <button onClick={() => handleVerCurso(curso)}>Ver curso</button>
           </div>
         ))}
       </div>

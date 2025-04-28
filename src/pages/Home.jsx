@@ -1,4 +1,7 @@
-import { Routes, Route, Link } from 'react-router-dom';
+import { Routes, Route } from 'react-router-dom';
+import { useEffect } from 'react';
+import Swal from 'sweetalert2';
+
 import Perfil from './Perfil';
 import Cursos from './Cursos';
 import Capacitaciones from './Capacitaciones';
@@ -9,6 +12,15 @@ import Configuracion from './Configuracion';
 import Navbar from '../components/Navbar';
 
 function Home() {
+  useEffect(() => {
+    Swal.fire({
+      title: '¡Bienvenido!',
+      text: 'Explora las secciones disponibles.',
+      icon: 'success',
+      confirmButtonText: 'Comenzar'
+    });
+  }, []);
+
   return (
     <div>
       <Navbar />

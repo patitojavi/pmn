@@ -1,6 +1,16 @@
 import '../components/Perfil.css';
+import Swal from 'sweetalert2';
 
 function Perfil() {
+  const handleEditarPerfil = () => {
+    Swal.fire({
+      title: 'Función no disponible',
+      text: 'La edición de perfil está deshabilitada en este prototipo.',
+      icon: 'info',
+      confirmButtonText: 'Entendido'
+    });
+  };
+
   return (
     <div className="perfil-container">
       <div className="perfil-card">
@@ -26,12 +36,12 @@ function Perfil() {
           </div>
         </div>
 
-        <button className="editar-btn">Editar perfil</button>
+        <button className="editar-btn" onClick={handleEditarPerfil}>
+          Editar perfil
+        </button>
       </div>
     </div>
   );
 }
 
 export default Perfil;
-
-  

@@ -1,4 +1,5 @@
 import '../components/Capacitaciones.css';
+import Swal from 'sweetalert2';
 
 const capacitaciones = [
   {
@@ -25,6 +26,24 @@ const capacitaciones = [
 ];
 
 function Capacitaciones() {
+  const handleAction = (cap) => {
+    if (cap.estado === 'Disponible') {
+      Swal.fire({
+        title: '¡Inscripción exitosa!',
+        text: `Te has inscrito a "${cap.nombre}".`,
+        icon: 'success',
+        confirmButtonText: 'Genial'
+      });
+    } else {
+      Swal.fire({
+        title: 'Visualizando',
+        text: `Estás viendo la capacitación: "${cap.nombre}".`,
+        icon: 'info',
+        confirmButtonText: 'Entendido'
+      });
+    }
+  };
+
   return (
     <div className="capacitaciones-container">
       <h2>Capacitaciones</h2>
@@ -37,7 +56,7 @@ function Capacitaciones() {
             <span className={`estado ${cap.estado.toLowerCase().replace(' ', '-')}`}>
               {cap.estado}
             </span>
-            <button>
+            <button onClick={() => handleAction(cap)}>
               {cap.estado === 'Disponible' ? 'Inscribirse' : 'Ver'}
             </button>
           </div>
